@@ -7,8 +7,6 @@ It handles the authentication work so you don't have to.
 It supports URLEncoding and Nonce Encoding.  It also supports WSSession and API Keys.
 You can mix and match the encoding and the key type as well.
 
-To install the code run:
-
 To install from pypi
 
     easy_install byu_ws_cli
