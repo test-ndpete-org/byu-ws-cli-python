@@ -19,7 +19,7 @@ if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
 setup(name='byu_ws_cli',
-      version='0.9.6',
+      version='0.9.7',
       description='A command-line web service client for calling BYU REST web services.',
       long_description=long_description,
       author='BYU OIT Core Application Engineering',
@@ -30,7 +30,7 @@ setup(name='byu_ws_cli',
       test_suite="byu_ws_cli.test",
       license="MIT",
       obsoletes=['oit_web_service_client'],
-      requires=['byu_ws_sdk (<1.1.0)'],
+      install_requires=['byu_ws_sdk < 1.1.0'],
       scripts=['bin/call_byu_ws'],
       zip_safe=True,
       **extra
