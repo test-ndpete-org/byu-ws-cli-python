@@ -106,6 +106,6 @@ class CallWebServiceCLI(object):
                                                                        headers)
 
         if not self._options.demo:
-            print "Status Code:", status
-            print "Headers:", ["%s: %s" % (key, headers[key]) for key in headers.keys()]
-            print "Response:", oit.get_formatted_response(headers, response)
+            print("Status Code:", status)
+            print("Headers:", ["%s: %s" % (key, headers[key]) for key in headers.keys()])
+            print("Response:", oit.get_formatted_response(headers, response))

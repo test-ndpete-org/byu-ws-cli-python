@@ -3,6 +3,8 @@ byu-ws-cli-python
 
 A command-line web service client for calling BYU REST web services.
 
+Supports Python 2.7 and 3.3.
+
 It handles the authentication work so you don't have to.
 It supports URLEncoding and Nonce Encoding.  It also supports WSSession and API Keys.
 You can mix and match the encoding and the key type as well.
