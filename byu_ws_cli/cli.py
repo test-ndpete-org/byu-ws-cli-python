@@ -103,7 +103,7 @@ class CallWebServiceCLI(object):
 
         headers = self._generate_headers(self._options, requestBody, url)
         response, status, headers, response_full = oit.send_ws_request(url, self._options.http_method, requestBody,
-                                                                       headers)
+                                                                       headers=headers)
 
         if not self._options.demo:
             print("Status Code:", status)
