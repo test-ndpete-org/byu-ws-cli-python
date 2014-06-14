@@ -5,8 +5,8 @@ import sys
 from setuptools import setup, find_packages
 
 
-if sys.version_info == (2, 7,) or sys.version_info == (3, 3,):
-    sys.stderr.write("byu_ws_cli currently requires Python 2.7 or Python 3.3.\n")
+if sys.version_info == (2, 7,) or sys.version_info > (3,):
+    sys.stderr.write("byu_ws_cli currently requires Python 2.7 or Python 3.*\n")
     sys.exit(-1)
 
 # we only use the subset of markdown that is also valid reStructuredText so

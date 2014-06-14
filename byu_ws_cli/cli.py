@@ -39,6 +39,7 @@ def setup_options_and_run():
     parser.add_option("--accept", help="the HTTP request's accept header value", default=None)
     parser.add_option("-c", "--content-type", help="the content-type of the http request")
     parser.add_option("-d", "--demo", action="store_true", help="show the http request and response (like in a demo)")
+    parser.add_option("-n", "--no-validate-certs", action="store_true", help="do not try to validate the cert of the server")
     parser.add_option("-o", "--other-headers",
                       help="add arbitrary headers to the HTTP request using the following format. "
                            "\"key:value[,key2:value2]\"",
@@ -102,8 +103,9 @@ class CallWebServiceCLI(object):
         requestBody = oit.get_body_from_file(self._options.body)
 
         headers = self._generate_headers(self._options, requestBody, url)
+        verify = not self._options.no_validate_certs
         response, status, headers, response_full = oit.send_ws_request(url, self._options.http_method, requestBody,
-                                                                       headers=headers)
+                                                                       headers=headers, verify=verify)
 
         if not self._options.demo:
             print("Status Code:", status)
