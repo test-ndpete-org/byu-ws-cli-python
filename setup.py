@@ -5,8 +5,8 @@ import sys
 from setuptools import setup, find_packages
 
 
-if sys.version_info == (2, 7,) or sys.version_info > (3,):
-    sys.stderr.write("byu_ws_cli currently requires Python 2.7 or Python 3.*\n")
+if not ((sys.version_info >= (2, 7,) and sys.version_info < (3,)) or sys.version_info >= (3, 3,)):
+    sys.stderr.write("byu_ws_cli currently requires Python 2.7 or Python 3.3 or greater\n")
     sys.exit(-1)
 
 # we only use the subset of markdown that is also valid reStructuredText so
@@ -15,7 +15,7 @@ with open("README.md") as rm_file:
     long_description = rm_file.read()
 
 setup(name='byu_ws_cli',
-      version='0.9.8',
+      version='0.9.9',
       description='A command-line web service client for calling BYU REST web services.',
       long_description=long_description,
       author='BYU OIT Core Application Engineering',
