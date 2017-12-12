@@ -1,5 +1,5 @@
 $schemaver: '2.0'
-deployables:
+software:
   - name: byu_ws_cli
     type: Command-line App
     aliases:
