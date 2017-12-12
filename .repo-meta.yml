@@ -51,5 +51,4 @@ software:
       env: production
       team:
       app: byu_ws_cli
-    federation_json_url: https://raw.githubusercontent.com/test-ndpete-org/byu-ws-cli-python/master/.repo-meta.yml
     x-anything:
