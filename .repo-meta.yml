@@ -19,6 +19,7 @@ software:
       source_repo_url: https://github.com/test-ndpete-org/byu-ws-cli-python
       swagger_urls:
     microservice: false
+    standard_change_template_id: some_id
     technologies_used:
       - Python
       - OIT Custom Web Service Authentication
